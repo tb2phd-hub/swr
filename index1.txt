@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Weather Research (SWR)</title>
+    <link rel="icon" href="March07.1948.png" type="image/x-icon">
+
+    <!-- Google Analytics Tracking Code -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q01PC2FV8D"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-Q01PC2FV8D');
+    </script>
+
+    <style>
+        /* CSS Redesign */
+        :root {
+            --bg-color: #e0f2f1; /* Soft Teal */
+            --header-bg: #004d40; /* Dark Green */
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --link-color: #00796b;
+            --link-hover: #004d40;
+            --heading-color: #3e2723; /* Dark Brown */
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--header-bg);
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        header img:hover {
+            transform: scale(1.05);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .intro-section {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            border-left: 5px solid var(--header-bg);
+        }
+
+        .intro-section h2 {
+            margin-top: 0;
+            color: var(--heading-color);
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .card h2 {
+            font-size: 1.25rem;
+            color: var(--heading-color);
+            border-bottom: 2px solid #eeeeee;
+            padding-bottom: 10px;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .card ul li {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f5f5f5;
+            font-size: 0.95rem;
+        }
+
+        .card ul li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            color: var(--link-hover);
+            text-decoration: underline;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background-color: var(--header-bg);
+            color: white !important;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .contact-btn:hover {
+            background-color: #00251a;
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: var(--header-bg);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+        
+        #visitor-counter {
+            margin-top: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="https://www.helioviewer.org/#" target="_blank" title="Go to Helioviewer">
+            <img src="SWR_LOGO.png" alt="Space Weather Research Logo" width="160" height="140">
+        </a>
+    </header>
+
+    <div class="container">
+        <!-- Introductory Content -->
+        <section class="intro-section">
+            <h2>Welcome to Space Weather Research</h2>
+            <p><strong>Note:</strong> The website is designed for <b>"Solar Physics & Space Weather Research"</b> enthusiasts. This site provides Source Data for research, Upcoming conferences & schools, Video lectures, Software download links, etc., with the intention to get all data at one place.</p>
+            <p>Data provided by <a href="https://pds.nasa.gov/" target="_blank">NASA Missions</a>. Explore opportunities via <a href="https://solarnews.nso.edu/" target="_blank">SolarNews</a>, <a href="https://appliedsciences.nasa.gov/join-mission/opportunities" target="_blank">NASA Opportunities</a>, <a href="http://lists.igpp.ucla.edu/pipermail/spa/2023-March/000569.html" target="_blank">Meetings & Jobs</a>, and <a href="https://www.indiascienceandtechnology.gov.in/" target="_blank">India Sci, Tech & Innovation</a>. Definations are available at <a href="https://astronomy.swin.edu.au/cosmos/A" target="_blank">COSMOS</a>. Conduct literature surveys at <a href="https://ui.adsabs.harvard.edu/" target="_blank">ADS</a>, <a href="https://www.prl.res.in/~library/" target="_blank">PRL Library</a>, and <a href="https://scholar.google.com/" target="_blank">Google Scholar</a>.</p>
+        </section>
+
+        <!-- Detailed Scientific Explanation Section -->
+        <section class="intro-section">
+            <h2>Sunspot numbers & High Speed Streams (HSS)</h2>
+            <p>Major <a href="http://sidc.oma.be/silso/datafiles" target="_blank">sunspot numbers</a> result in <a href="https://www.spaceweatherlive.com/en/help/what-is-a-coronal-hole.html" target="_blank">coronal holes</a>. <a href="http://www.geodin.ro/varsiti/" target="_blank">HSS</a> is often associated with coronal holes, which can be traced by <a href="https://arxiv.org/abs/1711.11476" target="_blank">CHIMERA segmentation</a> on <a href="https://www.solarmonitor.org/chimera.php" target="_blank">Solar Monitor</a>. The solar wind speed due to coronal holes from poles is approx. 500-800km/sec, while from the nearby equator ranges from 300-400km/sec. The combination of these winds gives compressions of slow-speed winds due to high-speed winds (CIRs), resulting in features like denser regions, larger Ap-index, negative Bz, increase in IMF, moderate geomagnetic storms, and gradual increases in temperature.</p>
+        </section>
+
+        <!-- Main Link Grid -->
+        <div class="grid-layout">
+            
+            <div class="card">
+                <h2>SWR Team Information</h2>
+                <ul>
+                    <li><a href="https://meet.google.com/drt-rxqd-czk" target="_blank">Google Meet Link</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/1xX1RUBcRRu7xQ17xBjTjTblOnmWnBQQz?usp=sharing" target="_blank">Meeting Photos</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/1EtswvAl5tKuJ5KSOmLEen4MHIm3GZPDG/" target="_blank">Research Papers, Books, Presentations</a></li>
+                    <li><a href="https://www.youtube.com/@swr_tutorials" target="_blank">SWR Tutorials</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/10K5mizHmkNWMr3c8eIWX6Lb9_y88ZgzU" target="_blank">Data Drive</a></li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Research Paper Writing</h2>
+                <ul>
+                    <li><a href="https://zenodo.org/" target="_blank">Present (Generate DOI) PPT</a></li>
+                    <li><a href="https://ui.adsabs.harvard.edu/" target="_blank">Search Research Papers</a></li>
+                    <li><a href="https://shodhganga.inflibnet.ac.in/" target="_blank">Shodhganga Theses & Dissertations</a></li>
+                    <li><a href="https://www.mendeley.com/download-desktop-new/" target="_blank">Mendeley Reference Manager</a></li>
+                    <li><a href="https://mjl.clarivate.com/home" target="_blank">Search Journal to Publish</a></li>
+                    <li><a href="https://secure.urkund.com/login/sign-in?returnUrl=https%3A%2F%2Fsecure.urkund.com%2Finbox%2Finbox" target="_blank">Plagiarism Checker (Urkund)</a></li>
+                    <li>Academic Writing: <a href="https://www.latex-project.org/get/" target="_blank">LaTeX</a> | <a href="https://pandoc.org/index.html" target="_blank">Pandoc</a> | <a href="https://www.bibtex.com/c/bibtex-to-ris-converter/" target="_blank">.ris to BibTeX Converter</a></li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Event Catalogs & Forecasting</h2>
+                <ul>
+                    <li><a href="https://spaceweather.com/" target="_blank">SpaceWeather.com</a></li>
+                    <li><a href="http://voparis-helio.obspm.fr/hfc-gui/index.php/" target="_blank">Heliophysics Feature Catalogue</a></li>
+                    <li><a href="http://hec.helio-vo.eu/hec/hec_gui.php" target="_blank">Heliophysics Event Catalog</a></li>
+                    <li><a href="https://oh.geof.unizg.hr/DBM/dbm.php" target="_blank">Forecasting ICMEs (Drag-Based Model)</a></li>
+                    <li><a href="http://www.srl.caltech.edu/ACE/ASC/DATA/level3/icmetable2.htm" target="_blank">SRL Caltech ICME Catalog</a></li>
+                    <li><a href="https://helioforecast.space/icmecat" target="_blank">Helio4cast ICME/SIR/HI Catalog</a></li>
+                    <li><a href="http://storms-service.irap.omp.eu/" target="_blank">STORM - All Models at One Place</a></li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Real Time Data & Heliophysics</h2>
+                <ul>
+                    <li><a href="https://kauai.ccmc.gsfc.nasa.gov/DONKI/search/" target="_blank">DONKI - Find Events</a></li>
+                    <li><a href="https://iswa.gsfc.nasa.gov/IswaSystemWebApp/" target="_blank">iSWA - CCMC</a></li>
+                    <li><a href="http://www.solarmonitor.org/" target="_blank">Solar Monitor</a></li>
+                    <li><a href="https://helioviewer.ias.u-psud.fr/" target="_blank">Helioviewer</a> | <a href="https://www.jhelioviewer.org/" target="_blank">Software</a></li>
+                    <li><a href="https://nssdc.gsfc.nasa.gov/space/" target="_blank">NASA Space Science Data Archive</a></li>
+                    <li><a href="http://jsoc.stanford.edu/" target="_blank">Joint Science Operations Center (JSOC)</a></li>
+                    <li><a href="https://sdac.virtualsolar.org/cgi/search?time=1&instrument=1&spectrum=1&version=current&build=1/" target="_blank">Virtual Solar Observatory</a></li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Flares & SEPs</h2>
+                <ul>
+                    <li><a href="https://spaceweather.com/glossary/flareclasses.html" target="_blank">Classification of Flares</a></li>
+                    <li><a href="https://umbra.nascom.nasa.gov/SEP/" target="_blank">Solar Proton Events Catalog</a></li>
+                    <li><a href="https://www.polarlicht-vorhersage.de/goes-archive" target="_blank">GOES X-ray Flux Archive</a></li>
+                    <li><a href="https://satdat.ngdc.noaa.gov/sem/goes/data/full/" target="_blank">GOES Full Data (XRS)</a></li>
+                    <li><a href="https://solarflare.njit.edu/datasources.html" target="_blank">Flare Background Data</a></li>
+                    <li><a href="https://datacenter.stix.i4ds.net/" target="_blank">STIX Data</a></li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>CMEs, Radio Bursts & Cosmic Rays</h2>
+                <ul>
+                    <li><a href="https://cdaw.gsfc.nasa.gov/index.html" target="_blank">CDAW Data Center (CMEs)</a></li>
+                    <li><a href="http://spaceweather.gmu.edu/seeds/" target="_blank">SEEDS CME Catalog</a></li>
+                    <li><a href="https://wdc.kugi.kyoto-u.ac.jp/wdc/Sec3.html" target="_blank">Kyoto Geomagnetic Indices</a></li>
+                    <li><a href="http://solar.physics.montana.edu/takeda/radio_burst/srb.html" target="_blank">Types of Radio Burst</a></li>
+                    <li><a href="https://solar-radio.gsfc.nasa.gov/wind/data_products.html" target="_blank">Type II Bursts (Wind/WAVES)</a></li>
+                    <li><a href="https://gle.oulu.fi/#/" target="_blank">Ground Level Enhancements (GLEs)</a></li>
+                    <li><a href="https://www.lightningmaps.org/" target="_blank">Worldwide Lightning Maps</a></li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Planet & Spacecraft Data</h2>
+                <ul>
+                    <li><a href="http://cosinekitty.com/solar_system.html" target="_blank">Solar System Calculator</a></li>
+                    <li><a href="https://wgc.jpl.nasa.gov:8443/webgeocalc/#NewCalculation" target="_blank">Coordinate System (SPICE)</a></li>
+                    <li><a href="https://stellarium-web.org/" target="_blank">Stellarium</a></li>
+                    <li><a href="http://www-pw.physics.uiowa.edu/~jbg/satplot.html" target="_blank">CASSINI Trajectory (KSM)</a></li>
+                    <li><a href="https://pds-atmospheres.nmsu.edu/data_and_services/atmospheres_data/catalog.htm" target="_blank">PDS Data (NASA Missions)</a></li>
+                    <li><a href="https://www.issdc.gov.in/isda.html" target="_blank">ISRO Missions</a></li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Software, Coding & Tutorials</h2>
+                <ul>
+                    <li><a href="https://www.l3harrisgeospatial.com/Software-Technology/IDL" target="_blank">IDL Downloads</a> & <a href="https://hesperia.gsfc.nasa.gov/hessi/solar_install/customize_a_script.html" target="_blank">SSWIDL</a></li>
+                    <li><a href="https://www.python.org/downloads/" target="_blank">Python</a> | <a href="https://www.anaconda.com/products/individual" target="_blank">Anaconda</a> | <a href="https://sunpy.org/" target="_blank">SunPy</a></li>
+                    <li><a href="https://code.visualstudio.com/" target="_blank">VS Code</a> & <a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a></li>
+                    <li><a href="https://developers.google.com/" target="_blank">Google Developer Program</a></li>
+                    <li><a href="https://www.w3schools.com/" target="_blank">W3Schools Coding Tutorials</a></li>
+                    <li><a href="https://spoken-tutorial.org/" target="_blank">IIT Bombay Training Modules</a></li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h2>Conferences, Courses & Funding</h2>
+                <ul>
+                    <li><a href="https://www.cospar2024.org/" target="_blank">COSPAR Meetings</a></li>
+                    <li><a href="https://heliophysics.ucar.edu/summer-school/how-to-apply" target="_blank">NASA Heliophysics Summer School</a></li>
+                    <li><a href="https://ocw.mit.edu/courses/audio-video-courses/" target="_blank">MIT OpenCourseWare</a></li>
+                    <li><a href="https://swayam.gov.in/nc_details/NPTEL" target="_blank">NPTEL SWAYAM Lectures</a></li>
+                    <li><a href="https://cpaess.ucar.edu/wings" target="_blank">Dissertation Fellowship (UCAR)</a></li>
+                </ul>
+            </div>
+
+        </div> <!-- End Grid Layout -->
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdc6PdnR9cLu8HclMLl5-sHWp0LaU_pUD0FfLrg84zXIzovtg/viewform?usp=sharing" target="_blank" class="contact-btn">Contact SWR</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Space Weather Research</p>
+        <div id="visitor-counter">
+            <!-- Free Visitor Counter Script -->
+            <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/002785"></script>
+        </div>
+    </footer>
+
+</body>
+</html>
