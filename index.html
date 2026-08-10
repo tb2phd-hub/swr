@@ -246,6 +246,154 @@
                 padding: 19px 18px 18px;
             }
         }
+
+        /* Visual system */
+        :root {
+            --ink: #17252d;
+            --muted: #52636b;
+            --panel: rgba(255, 253, 247, 0.88);
+            --panel-strong: #fffaf0;
+            --line: rgba(23, 37, 45, 0.14);
+            --accent: #d45d2c;
+            --accent-soft: #f0a45b;
+            --cyan: #147f82;
+            --night: #102f3a;
+        }
+
+        body {
+            background: #f2eee4;
+            background-image: radial-gradient(circle at 8% 4%, rgba(240, 164, 91, 0.34), transparent 24rem), radial-gradient(circle at 96% 20%, rgba(20, 127, 130, 0.2), transparent 28rem), linear-gradient(135deg, rgba(255, 255, 255, 0.52) 25%, transparent 25%) 0 0 / 7px 7px;
+            color: var(--ink);
+            padding-top: 42px;
+        }
+
+        .logo {
+            margin-bottom: 26px;
+        }
+
+        .logo img {
+            background: #fffaf0;
+            border: 1px solid rgba(23, 37, 45, 0.12);
+            border-radius: 50%;
+            box-shadow: 0 14px 30px rgba(16, 47, 58, 0.16);
+            padding: 9px;
+        }
+
+        .header-container {
+            background: rgba(255, 253, 247, 0.66);
+            border-bottom: 1px solid var(--line);
+            margin-bottom: 38px;
+            padding: clamp(22px, 4vw, 46px);
+            position: relative;
+        }
+
+        .header-container::before {
+            background: var(--accent);
+            content: '';
+            height: 5px;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 88px;
+        }
+
+        .main-title {
+            color: var(--night);
+            font-size: clamp(2.4rem, 6vw, 5.8rem);
+            letter-spacing: -0.035em;
+            max-width: 960px;
+        }
+
+        .sub-title {
+            color: var(--accent);
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .top-bar {
+            background: var(--night);
+            border: 0;
+            border-radius: 4px;
+            box-shadow: 0 14px 24px rgba(16, 47, 58, 0.15);
+            margin-top: 30px;
+        }
+
+        .search-bar {
+            color: #fffaf0;
+        }
+
+        .search-bar::placeholder {
+            color: #afc5c4;
+        }
+
+        .visitors {
+            color: #ffd49a;
+        }
+
+        .visitors a {
+            color: #8de0d2;
+            font-weight: 500;
+            margin-left: 12px;
+        }
+
+        .note-box {
+            background: #fffaf0;
+            border: 1px solid var(--line);
+            border-left: 5px solid var(--accent);
+            border-radius: 0;
+            color: var(--muted);
+            box-shadow: 0 8px 18px rgba(23, 37, 45, 0.06);
+        }
+
+        .tile-grid {
+            gap: 18px;
+        }
+
+        .tile {
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            box-shadow: 0 8px 18px rgba(23, 37, 45, 0.06);
+            padding: 24px 24px 22px;
+        }
+
+        .tile:hover {
+            background: var(--panel-strong);
+            border-color: rgba(20, 127, 130, 0.55);
+            box-shadow: 0 14px 26px rgba(23, 37, 45, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .tile h2 {
+            color: var(--accent);
+            font-size: 1.2rem;
+            letter-spacing: -0.02em;
+        }
+
+        .tile li {
+            color: var(--muted);
+        }
+
+        .tile li::marker {
+            color: var(--accent-soft);
+        }
+
+        @media (max-width: 680px) {
+            body {
+                padding-top: 22px;
+            }
+
+            .header-container {
+                padding: 22px 18px;
+            }
+
+            .visitors a {
+                display: block;
+                margin-left: 0;
+                margin-top: 4px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -260,6 +408,7 @@
             <input type="text" class="search-bar" placeholder="Search topics, links, or keywords...">
             <div class="visitors" id="live-visitor-counter">
                 <!-- Counter will be injected here by script -->
+                <a href="https://clustrmaps.com/" target="_blank" rel="noopener">View visitors by country</a>
             </div>
         </div>
 
@@ -602,8 +751,8 @@
             // Save the updated count back to local storage
             localStorage.setItem(storageKey, count);
             
-            // Inject the counter text with an eye icon into the visitors div
-            visitorElement.innerHTML = `👁️ ${count.toLocaleString()} Visitors`;
+            // Inject the counter text without replacing the country-viewer link
+            visitorElement.insertAdjacentText('afterbegin', `👁️ ${count.toLocaleString()} Visitors `);
         });
     </script>
 </body>
