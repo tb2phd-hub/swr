@@ -6,142 +6,244 @@
     <title>Space Weather Research (SWR)</title>
     <link rel="icon" href="March07.1948.png" type="image/x-icon">
     <style>
-           /* Global Styles */
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+        :root {
+            --ink: #f4f1e8;
+            --muted: #a9b1bf;
+            --panel: rgba(19, 30, 45, 0.88);
+            --panel-strong: #162538;
+            --line: rgba(173, 193, 211, 0.18);
+            --accent: #ffb45c;
+            --accent-soft: #ffd79c;
+            --cyan: #76d6d0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            background-color: #0f0f14;
-            color: #d1d5db;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #08131f;
+            background-image: radial-gradient(circle at 12% 0%, rgba(57, 106, 130, 0.34), transparent 31rem), radial-gradient(circle at 88% 18%, rgba(173, 96, 51, 0.18), transparent 27rem), linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+            background-size: auto, auto, 48px 48px, 48px 48px;
+            color: var(--ink);
+            font-family: 'DM Sans', 'Trebuchet MS', sans-serif;
             margin: 0;
-            padding: 20px;
-            line-height: 1.6;
+            padding: 28px clamp(16px, 4vw, 64px) 72px;
+            line-height: 1.65;
         }
 
         a {
-            color: #58a6ff;
-            text-decoration: none;
+            color: var(--cyan);
+            text-decoration-color: rgba(118, 214, 208, 0.35);
+            text-underline-offset: 3px;
+            overflow-wrap: anywhere;
+            transition: color 160ms ease, text-decoration-color 160ms ease;
         }
 
-        a:hover {
-            text-decoration: underline;
+        a:hover,
+        a:focus-visible {
+            color: var(--accent-soft);
+            text-decoration-color: currentColor;
         }
 
-        /* Top Header Section */
-        .header-container {
+        .logo {
+            margin: 0 auto 18px;
+            width: min(100%, 1400px);
+            text-align: left !important;
+        }
+
+        .logo img {
+            display: block;
+            height: auto;
+            max-width: 132px;
+            object-fit: contain;
+            filter: drop-shadow(0 10px 24px rgba(255, 164, 71, 0.2));
+        }
+
+        .header-container,
+        .tile-grid {
             max-width: 1400px;
-            margin: 0 auto 30px auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .header-container {
+            margin-bottom: 34px;
         }
 
         .main-title {
-            text-align: center;
-            color: #ffffff;
-            font-size: 2.5rem;
-            margin-bottom: 5px;
+            color: var(--ink);
+            font-family: 'Space Grotesk', 'Trebuchet MS', sans-serif;
+            font-size: clamp(2.1rem, 5vw, 4.7rem);
+            letter-spacing: 0.01em;
+            line-height: 1;
+            margin: 0;
+            max-width: 900px;
         }
 
         .sub-title {
-            text-align: center;
-            color: #9ca3af;
-            font-size: 1.1rem;
-            margin-top: 0;
-            margin-bottom: 30px;
+            color: var(--muted);
+            font-size: clamp(1rem, 2vw, 1.22rem);
+            margin: 14px 0 30px;
         }
 
         .top-bar {
-            display: flex;
-            justify-content: space-between;
             align-items: center;
-            background-color: #1a1a24;
-            padding: 15px 25px;
-            border-radius: 8px;
-            border: 1px solid #2a2a35;
-            margin-bottom: 20px;
+            background: rgba(15, 28, 43, 0.78);
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+            margin-bottom: 18px;
+            padding: 8px 14px 8px 18px;
         }
 
         .search-bar {
             background: transparent;
-            border: none;
-            color: #d1d5db;
-            font-size: 1rem;
+            border: 0;
+            color: var(--ink);
+            font: inherit;
+            min-width: 0;
+            outline: 0;
+            padding: 10px 0;
             width: 100%;
-            outline: none;
+        }
+
+        .search-bar::placeholder {
+            color: #8190a2;
+        }
+
+        .search-bar:focus-visible {
+            outline: 2px solid var(--cyan);
+            outline-offset: 4px;
         }
 
         .visitors {
-            color: #4ade80;
-            font-weight: bold;
+            color: var(--accent-soft);
+            font-size: 0.88rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
             white-space: nowrap;
-            margin-left: 20px;
         }
 
         .note-box {
-            background-color: #1a1a24;
-            border-left: 4px solid #ff6b6b;
-            padding: 20px;
-            border-radius: 0 8px 8px 0;
-            margin-bottom: 40px;
-            border-top: 1px solid #2a2a35;
-            border-right: 1px solid #2a2a35;
-            border-bottom: 1px solid #2a2a35;
-            font-size: 0.95rem;
+            background: linear-gradient(110deg, rgba(39, 52, 62, 0.92), rgba(22, 37, 56, 0.82));
+            border: 1px solid var(--line);
+            border-left: 4px solid var(--accent);
+            border-radius: 0 10px 10px 0;
+            color: #cbd2da;
+            font-size: 0.94rem;
+            padding: 18px 22px;
         }
 
-        /* 3-Column Grid Layout */
         .tile-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            max-width: 1400px;
-            margin: 0 auto;
+            gap: 16px;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
         }
 
-        /* Tile Design from Screenshot */
         .tile {
-            background-color: #1a1a24;
-            border: 1px solid #2a2a35;
-            border-radius: 8px;
-            padding: 25px;
-            box-sizing: border-box;
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+            min-width: 0;
+            padding: 22px 22px 20px;
+            transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
+        }
+
+        .tile:hover {
+            background: var(--panel-strong);
+            border-color: rgba(118, 214, 208, 0.42);
+            transform: translateY(-3px);
         }
 
         .tile h2 {
-            font-size: 1.25rem;
-            color: #ff6b6b; /* Coral/Salmon color from your screenshot */
-            margin-top: 0;
-            margin-bottom: 15px;
-            border-bottom: 1px solid #2a2a35;
-            padding-bottom: 10px;
-            font-weight: 600;
+            border-bottom: 1px solid var(--line);
+            color: var(--accent);
+            font-family: 'Space Grotesk', 'Trebuchet MS', sans-serif;
+            font-size: 1.15rem;
+            line-height: 1.25;
+            margin: 0 0 16px;
+            padding-bottom: 13px;
         }
 
         .tile ul {
-            padding-left: 20px;
             margin: 0;
+            padding-left: 20px;
         }
 
         .tile li {
-            margin-bottom: 12px;
-            font-size: 0.95rem;
-            word-wrap: break-word;
+            color: #cbd2da;
+            font-size: 0.92rem;
+            margin-bottom: 10px;
+            overflow-wrap: anywhere;
         }
 
-        /* Responsive adjustments */
-        @media (max-width: 1024px) {
+        .tile li:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 1050px) {
             .tile-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(2, minmax(0, 1fr));
             }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 680px) {
+            body {
+                padding: 20px 14px 48px;
+            }
+
+            .logo {
+                margin-bottom: 12px;
+            }
+
+            .logo img {
+                max-width: 108px;
+            }
+
+            .header-container {
+                margin-bottom: 24px;
+            }
+
+            .main-title {
+                font-size: clamp(2rem, 12vw, 3.5rem);
+            }
+
+            .sub-title {
+                margin-bottom: 22px;
+            }
+
+            .top-bar {
+                align-items: stretch;
+                flex-direction: column;
+                gap: 3px;
+                padding: 8px 14px 12px;
+            }
+
+            .visitors {
+                border-top: 1px solid var(--line);
+                padding-top: 8px;
+            }
+
+            .note-box {
+                padding: 16px 17px;
+            }
+
             .tile-grid {
                 grid-template-columns: 1fr;
             }
-            .top-bar {
-                flex-direction: column;
-                gap: 15px;
-                align-items: flex-start;
-            }
-            .visitors {
-                margin-left: 0;
+
+            .tile {
+                padding: 19px 18px 18px;
             }
         }
     </style>
